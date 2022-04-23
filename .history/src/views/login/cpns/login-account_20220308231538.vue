@@ -1,0 +1,32 @@
+<template>
+  <div class="login-account">
+    <el-form label-width="60px">
+      <el-form-item label="账号">
+        <el-input></el-input>
+      </el-form-item>
+      <el-form-item label="密码">
+        <el-input></el-input>
+      </el-form-item>
+    </el-form>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, reactive } from 'vue'
+export default defineComponent({
+  setup() {
+    const account = reactive({
+      name: '',
+      password: ''
+    })
+    return {}
+  }
+})
+</script>
+<style scoped>
+.login-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

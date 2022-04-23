@@ -1,0 +1,44 @@
+<template>
+  <div class="page-search">
+    <hy-form v-bind="formItems" :formData="formData">
+      <template #header>
+        <h2 class="header">高级检索</h2>
+      </template>
+      <template #footer>
+        <div class="button">
+          <el-button type="" class="reset" icon="el-icon-delete"
+            >重置</el-button
+          >
+          <el-button type="primary" class="search" icon="el-icon-search"
+            >查询</el-button
+          >
+        </div>
+      </template>
+    </hy-form>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, reactive } from 'vue'
+import hyForm from '@/base-ui/form'
+import { formItems } from '@/views/main/system/user/config/search.config'
+export default defineComponent({
+  components: {
+    hyForm
+  },
+  setup() {
+    const formData = reactive({
+      username: '',
+      realName: '',
+      phone: '',
+      status: '',
+      createTime: ''
+    })
+    return {
+      formData,
+      formItems
+    }
+  }
+})
+</script>
+<style scoped></style>

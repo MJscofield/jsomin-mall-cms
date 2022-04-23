@@ -1,0 +1,71 @@
+<template>
+  <div class="line-echart">
+    <baseEchart></baseEchart>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { defineProps, computed } from 'vue'
+import baseEchart from '@/base-ui/echart'
+
+const props = defineProps<{
+  title: string
+  xLabel: string[]
+  values: any
+}>()
+const options = computed(() => {
+  return {
+    title: {
+      text: props.title
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'cross',
+        label: {
+          backgroundColor: '#6a7985'
+        }
+      }
+    },
+    legend: {
+      data: props.
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        boundaryGap: false,
+        data: props.xLabel
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [
+      {
+        name: 'Email',
+        type: 'line',
+        stack: 'Total',
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
+        data: props.values
+      }
+    ]
+  }
+})
+</script>
+<style scoped></style>

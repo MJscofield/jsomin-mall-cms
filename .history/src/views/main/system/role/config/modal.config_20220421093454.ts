@@ -1,0 +1,21 @@
+import { IForm } from '@/base-ui/form'
+export const modalConfig: IForm = {
+  colLayout: {
+    span: 24
+  },
+  formItems: [
+    {
+      field: 'name',
+      type: 'input',
+      label: '用户名',
+      required: true,
+      placeholder: '请输入用户名'
+    },
+    {
+      field: 'intro',
+      type: 'input',
+      label: '角色名',
+      placeholder: '请输入角色名'
+    }
+  ]
+}

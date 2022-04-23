@@ -1,0 +1,34 @@
+<template>
+  <div class="user">
+    <div class="search">
+      <el-form label-width="100px">
+        <el-form-item> 用户名<el-input> </el-input> </el-form-item>
+        <el-form-item>
+          <el-input> </el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-input> </el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-input> </el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-input> </el-input>
+        </el-form-item>
+      </el-form>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'user',
+  setup() {
+    return {}
+  }
+})
+</script>
+
+<style scoped></style>
